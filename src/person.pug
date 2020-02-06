@@ -1,0 +1,18 @@
+extends template.pug
+block content
+  //- Include Header block ('.header')
+  include assets/blocks/common-blocks/header/header.pug
+
+
+  div.wrapper
+    main.content
+      //- Include Person block ('.person')
+      include assets/blocks/person/person.pug
+
+
+      //- Include Pagination block ('.pagination')
+      include assets/blocks/common-blocks/pagination/pagination.pug
+
+
+  //- Include Footer block ('.footer')
+  include assets/blocks/common-blocks/footer/footer.pug

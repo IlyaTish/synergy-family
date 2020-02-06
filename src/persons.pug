@@ -1,0 +1,86 @@
+extends template.pug
+block content
+  //- Main block ('.main') data
+  -
+    const mainInfo = {
+      data: [{
+        title: 'Synergy\nFamily',
+        subtitle: 'Мнения, оценка и рейтинг локаций',
+        btn: 'Добавить персону',
+        background: 'assets/images/header-bg.jpg',
+        logo: 'assets/images/logo.svg'
+      }]
+    }
+  //- Include Main block ('.main')
+  include assets/blocks/common-blocks/main/main.pug
+  +main(mainInfo)
+
+
+  div.wrapper
+    main.content
+      //- Add block ('.add') col1 ('.add__col') data
+      - const col_1 = true
+      //- Add block ('.add') col2 ('.add__col') data
+      -
+        const col_2 = {
+          input_fields: [{
+            type: 'text',
+            title: 'Фамилия',
+            placeholder: 'Фамилия'
+          },
+          {
+            type: 'text',
+            title: 'Имя',
+            placeholder: 'Имя'
+          },
+          {
+            type: 'text',
+            title: 'Отчество',
+            placeholder: 'Отчество'
+          },
+          {
+            type: 'text',
+            title: 'Дата рождения',
+            placeholder: '01-01-1900'
+          }],
+        }
+      //- Add block ('.add') col3 ('.add__col') data
+      -
+        const col_3 = {
+          input_fields: [
+          {
+            type: 'text',
+            title: 'Место работы',
+            placeholder: 'Место работы'
+          },
+          {
+            type: 'text',
+            title: 'Должность',
+            placeholder: 'Должность'
+          },
+          {
+            type: 'text',
+            title: 'Телефон',
+            placeholder: '8 000 000 00 00'
+          },
+          {
+            type: 'text',
+            title: 'E-mail',
+            placeholder: 'E-mail'
+          }]
+        }
+      //- Include Add block ('.add')
+      include assets/blocks/common-blocks/add/add.pug
+      +add('Добавить персону', col_1)
+
+
+      //- Include Persons block
+      include assets/blocks/persons/persons.pug
+
+
+      //- Include Pagination block ('.pagination')
+      include assets/blocks/common-blocks/pagination/pagination.pug
+
+
+  //- Include Footer block ('.footer')
+  include assets/blocks/common-blocks/footer/footer.pug

@@ -1,0 +1,45 @@
+mixin review(reviews)
+  for review in reviews.data
+    .review
+      .review__row
+        .review__col.review__col--col-1
+          if review.location_img
+            img.review__img.review__img--location.lazy(data-src=''+ review.location_img +'')
+          if review.img
+            img.review__img.lazy(data-src=''+ review.img +'')
+          .review__desc
+            if review.name
+              span.review__name= review.name
+            if review.info
+              .review__info
+                each item in review.info
+                  span.review__info__item= item
+            span.review__date= review.date
+            .review__rate
+              each star in review.rate
+                i(class='icon '+ star +'')
+              i.class(class='icon '+ review.rate_icon +'')
+            .review__photos
+              i.icon.photo-icon
+              span= review.photos
+        .review__col.review__col--col-2
+          if review.title
+            h3.review__title=  review.title
+          if review.tag
+            .tag(tabindex='0')
+              span= review.tag
+          p.review__p= review.text
+          a.review__link Читать далее
+      .review__gallery.swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img.review__gallery__img.lazy(data-src='assets/images/gallery-img-01.jpg')
+          .swiper-slide
+            img.review__gallery__img.lazy(data-src='assets/images/gallery-img-02.jpg')
+          .swiper-slide
+            img.review__gallery__img.lazy(data-src='assets/images/gallery-img-03.jpg')
+          .swiper-slide
+            img.review__gallery__img.lazy(data-src='assets/images/gallery-img-04.jpg')
+        .swiper-button-next
+        .swiper-button-prev
+        .swiper-pagination

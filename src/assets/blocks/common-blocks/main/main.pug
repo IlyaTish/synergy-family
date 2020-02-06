@@ -1,0 +1,25 @@
+mixin main(mainInfo)
+  for main in mainInfo.data
+    .main(data-background=''+ main.background +'')
+      .main__cont
+        if main.logo
+          .main__col.main__col--first
+            a(href='index.html')
+              img.main__logo.lazy(data-src=''+ main.logo +'')
+        .main__col.main__col--second.container
+          .main__col
+            h1.main__title= main.title
+            p.main__p= main.subtitle
+            if main.info
+              .main__info
+                .main__info-cont
+                  each elem in main.info
+                    span.main__info__text= elem
+                button.main__btn.main__btn--margin.btn= main.btn
+            else
+              button.main__btn.btn= main.btn
+          if main.search
+            .main__col.main__col--third
+              .search-input.search-input--main
+                input.search-input__input(type='search' placeholder='Поиск')
+                i.search-icon.icon

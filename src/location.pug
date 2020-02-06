@@ -1,0 +1,53 @@
+extends template.pug
+block content
+  //- Include Header block ('.header')
+  include assets/blocks/common-blocks/header/header.pug
+
+
+  //- Main block ('.main') data
+  -
+    const mainInfo = {
+      data: [{
+        title: 'Варшавские\nбани',
+        subtitle: 'Москва',
+        btn: 'Добавить отзыв',
+        background: 'assets/images/varshavskie-bani-bg.jpg',
+        info: ['5-я парковая, д.23, к.2', '+7 (495) 222-22-22', 'varshavskie-bani.ru']
+      }]
+    }
+  //- Include Main block ('.main')
+  include assets/blocks/common-blocks/main/main.pug
+  +main(mainInfo)
+
+
+  div.wrapper
+    main.content
+      //- Add block ('.add') col2 ('.add__col') data
+      -
+        const col_lg = {
+          input_fields: [{
+            type: 'text',
+            title: 'Персона',
+            placeholder: 'ФИО'
+          }]
+        }
+      //- Add block ('.add') col3 ('.add__col') data
+      -
+        const col_2 = {
+          rate: true
+        }
+      //- Include Add block ('.add')
+      include assets/blocks/common-blocks/add/add.pug
+      +add('Добавить отзыв')
+
+
+      //- Include Location block ('.location')
+      include assets/blocks/location/location.pug
+
+
+      //- Include Pagination block ('.pagination')
+      include assets/blocks/common-blocks/pagination/pagination.pug
+
+
+  //- Include Footer block ('.footer')
+  include assets/blocks/common-blocks/footer/footer.pug

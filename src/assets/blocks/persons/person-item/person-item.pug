@@ -1,0 +1,23 @@
+mixin person-item(title, path, spec, comments)
+  a.person-item(href='person.html')
+    img.person-item__img.lazy(data-src=''+ path +'')
+    .person-item__desc
+      h3.person-item__title= title
+      .person-item__desc-bottom
+        .person-item__col
+          span.person-item__location= spec
+          .person-item__col.person-item__col--comments
+            i.comments-icon.icon
+            span.person-item__amount= comments
+
+
+.person-items.container.container--small
+  +person-item('Абрамов Михаил', 'assets/images/person-01.jpg', 'Министр', '43')
+  +person-item('Аветов Денис', 'assets/images/person-02.jpg', 'Руководитель', '40')
+  +person-item('Аветов Денис', 'assets/images/person-03.jpg', 'Музыкант', '39')
+  +person-item('Абрамов Михаил', 'assets/images/person-01.jpg', 'Министр', '43')
+  +person-item('Аветов Денис', 'assets/images/person-02.jpg', 'Руководитель', '40')
+  +person-item('Аветов Денис', 'assets/images/person-03.jpg', 'Музыкант', '39')
+  +person-item('Абрамов Михаил', 'assets/images/person-01.jpg', 'Министр', '43')
+  +person-item('Аветов Денис', 'assets/images/person-02.jpg', 'Руководитель', '40')
+  +person-item('Аветов Денис', 'assets/images/person-03.jpg', 'Музыкант', '39')

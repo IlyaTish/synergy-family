@@ -1,0 +1,65 @@
+.location.container.container--small
+  .location__info
+    select.location__rate
+      option(name='Рейтинг 5' value='5' selected) 32
+      option(name='Рейтинг 4' value='3') 40
+      option(name='Рейтинг 3' value='4') 13
+      option(name='Рейтинг 2' value='2') 1
+      option(name='Рейтинг 1' value='1') 0
+    .location__info-item
+      .location__info-item__amount 43
+      i.icon.comments-icon
+    .location__info-item
+      .location__info-item__amount 32
+      i.icon.like-icon
+    .location__info-item
+      .location__info-item__amount 5
+      i.icon.dislike-icon
+
+
+  //- Review block ('.review') data
+  -
+    const reviews = {
+      data: [{
+        img: 'assets/images/person-01.jpg',
+        name: 'Абрамов Михаил',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis quis odio et lacinia. Donec pretium rutrum bibendum. Maecenas purus erat, molestie sed semper ut, ornare vitae arcu. Praesent eget magna sed velit porta placerat.\nFusce consequat, turpis sit amet finibus auctor, enim mauris commodo sapien, facilisis tincidunt leo lorem sed diam. Aenean tempor bibendum fusce consequat, turpis sit amet finibus auctor, enim mauris commodo sapien, facilisis tincidunt leo lorem sed ... ',
+        date: '13.08.2019',
+        rate: ['star-fill-icon', 'star-fill-icon', 'star-fill-icon', 'star-fill-icon', 'star-empty-icon'],
+        rate_icon: 'like-icon',
+        photos: '12'
+      },
+      {
+        img: 'assets/images/person-02.jpg',
+        name: 'Аветов Денис',
+        text: 'Fusce consequat, turpis sit amet finibus auctor, enim mauris commodo sapien, facilisis tincidunt leo lorem sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis quis odio et lacinia.\nMaecenas purus erat, molestie sed semper ut, ornare vitae arcu. Praesent eget magna sed velit porta placerat. Aenean tempor bibendum fusce consequat, turpis sit amet finibus auctor, enim mauris commodo sapien, facilisis tincidunt leo lorem sed diam ... ',
+        date: '23.09.2019',
+        rate: ['star-fill-icon', 'star-fill-icon', 'star-fill-icon', 'star-fill-icon', 'star-fill-icon'],
+        rate_icon: 'like-icon',
+        photos: '8'
+      },
+      {
+        img: 'assets/images/person-03.jpg',
+        name: 'Аветов Денис',
+        text: ' Aenean tempor bibendum fusce consequat, turpis sit amet finibus auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis quis odio et lacinia. Donec pretium rutrum bibendum. Maecenas purus erat, molestie sed semper ut, ornare vitae arcu. Praesent eget magna sed velit porta placerat. Fusce consequat, turpis sit amet finibus auctor, enim mauris commodo sapien.',
+        date: '01.05.2019',
+        rate: ['star-fill-icon', 'star-fill-icon', 'star-fill-icon', 'star-empty-icon', 'star-empty-icon'],
+        rate_icon: 'dislike-icon',
+        photos: '17'
+      }]
+    }
+
+  .reviews.container.container--small
+    .reviews__title-cont
+      h2.reviews__title Отзывы
+      select.reviews__sort
+        option.disabled(disabled selected) Сортировка
+        option(name='Недавние' value='Недавние') Недавние
+        option(name='Рекомендуют' value='Рекомендуют') Рекомендуют
+        option(name='Не рекомендуют' value='Не рекомендуют') Не рекомендуют
+        option(name='Высокие оценки' value='Высокие оценки') Высокие оценки
+        option(name='Низкие оценки' value='Низкие оценки') Низкие оценки
+
+    //- Include Review block ('.review')
+    include ../common-blocks/review/review.pug
+    +review(reviews)

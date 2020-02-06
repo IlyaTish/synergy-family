@@ -1,0 +1,16 @@
+.container.locations
+  .locations__buttons
+    a.locations__btn.active.locations-btn(href='index.html') Локации
+    a.locations__btn.persons-btn(href='persons.html') Персоны
+
+
+  //- Include Tags block ('.tags')
+  include ../common-blocks/tags/tags.pug
+
+
+  //- Include Filters block ('.filters')
+  include filters/filters.pug
+
+
+  //- Include Location-item block ('.location-item')
+  include location-item/location-item.pug

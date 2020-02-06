@@ -1,0 +1,92 @@
+mixin col2(col_2)
+  if col_2
+    .add__col.add__col--second
+      if col_2.input_fields
+        for input in col_2.input_fields
+          .input-wrapper
+            span.add__form-title= input.title
+            input(type=''+ input.type +'' name=''+ input.title +'' placeholder=''+ input.placeholder +'').add__form-input
+      if col_2.select_fields
+        for select in col_2.select_fields
+          .input-wrapper
+            span.add__form-title= select.title
+            select(name=''+ select.title +'' placeholder=''+ select.title +'').add__form-input.add__form-input--select
+              option.disabled(disabled selected)= select.title
+              each option in select.options
+                option(value=''+ option +'')= option
+      if col_2.rate
+        .input-wrapper.input-wrapper--rate
+          span.add__form-title Оценка
+          .stars
+            span.star
+            span.star
+            span.star
+            span.star
+            span.star
+        .input-wrapper.input-wrapper--rec
+          span.add__form-title Рекомендация
+          .add__form__options
+            input(type='radio' id='recommended' name='Рекомендация' value='Рекомендую' checked)
+            input(type='radio' id='not-recommended' name='Рекомендация' value='Не рекомендую')
+
+
+mixin col3(col_3)
+  if col_3
+    .add__col.add__col--second
+      if col_3.input_fields
+        for input in col_3.input_fields
+          .input-wrapper
+            span.add__form-title= input.title
+            input(type=''+ input.type +'' name=''+ input.title +'' placeholder=''+ input.placeholder +'').add__form-input
+      if col_3.select_fields
+        for select in col_3.select_fields
+          .input-wrapper
+            span.add__form-title= select.title
+            select(name=''+ select.title +'' placeholder=''+ select.title +'').add__form-input.add__form-input--select
+              option.disabled(disabled selected)= select.title
+              each option in select.options
+                option(value=''+ option +'')= option
+
+
+mixin col_lg(col_lg)
+  if col_lg
+    .add__col.add__col--lg
+      if col_lg.input_fields
+        for input in col_lg.input_fields
+          .input-wrapper
+            span.add__form-title= input.title
+            input(type=''+ input.type +'' name=''+ input.title +'' placeholder=''+ input.placeholder +'').add__form-input
+      if col_lg.select_fields
+        for select in col_lg.select_fields
+          .input-wrapper
+            span.add__form-title= select.title
+            select(name=''+ select.title +'' placeholder=''+ select.title +'').add__form-input.add__form-input--select
+              option.disabled(disabled selected)= select.title
+              each option in select.options
+                option(value=''+ option +'')= option
+      .input-wrapper.input-wrapper--textarea
+        span.add__form-title Отзыв
+        textarea.add__form-input.add__form-input--textarea(placeholder='Введите текст')
+      .input-wrapper.input-wrapper--photo
+        span.add__form-title Добавить фотографию
+        .input-photo.input-photo--small
+          input(type='file' name='Фото').add__form-input
+      button.add__btn.add__btn--small(type='submit') Добавить
+
+
+mixin add(title, col_1)
+  .add.hidden
+    .add__content.container
+      .close
+      span.add__title= title
+      form.add__form
+        if col_1
+          .add__col
+            .input-wrapper
+              span.add__form-title Фото
+              .input-photo
+                input(type='file' name='Фото').add__form-input
+            button.add__btn(type='submit') Добавить
+        +col_lg(col_lg)
+        +col2(col_2)
+        +col3(col_3)

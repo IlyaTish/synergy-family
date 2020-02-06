@@ -1,0 +1,191 @@
+.reviews
+  &__title
+    margin: 66px 0 56px 0
+    color: $brown
+    font-size: 36px
+    @include font-style
+    &-cont
+      display: flex
+      align-items: baseline
+      justify-content: space-between
+  &--mt
+    margin-top: 44px
+
+  .jq-selectbox
+    min-width: 222px
+    font-size: 18px
+    &__dropdown
+      width: 100%
+      ul
+        li
+          font-size: 18px
+
+.review
+  background: #FFF
+  margin: 0 0 52px 0
+
+  &__row
+    display: flex
+    padding: 8px 8px 0 8px
+    box-sizing: border-box
+
+  &__col
+    &--col-2
+      margin: 0 0 0 32px
+
+  &__img
+    max-width: 296px
+    display: block
+    &--location
+      max-width: 408px
+
+  &__title
+    width: 100%
+    margin: 14px 0 0 0
+    display: inline-block
+    color: $brown
+    font-size: 36px
+    @include font-style
+
+  .tag
+    margin: 24px 0 10px 4px
+
+  &__name
+    width: 100%
+    margin: 16px 0 0 0
+    padding: 0 16px
+    display: inline-block
+    color: $brown
+    font-size: 28px
+    font-family: 'Roboto-Medium'
+
+  &__info
+    margin: 26px 0 0 0
+    padding: 0 0 0 16px
+    display: flex
+    justify-content: space-between
+    &__item
+      color: $main
+      font-size: 16px
+
+  &__date
+    margin: 20px 0 0 0
+    padding: 0 16px
+    display: inline-block
+
+  &__rate
+    margin: 22px 0 0 0
+    padding: 0 16px
+    i
+      margin: 0 4px 0 0
+      font-size: 24px
+    .like-icon, .dislike-icon
+      margin: 0 0 0 30px
+      font-size: 20px
+
+  &__photos
+    margin: 26px 0 0 0
+    padding: 0 16px
+    i
+      margin: 0 10px 0 0
+      font-size: 20px
+    span
+      left: 3px
+      bottom: 3px
+      position: relative
+
+  &__p
+    margin: 10px 0 0 0
+    color: $brown
+    font-size: 24px
+    font-weight: 400
+    font-family: 'Roboto-Light'
+    line-height: 40px
+    white-space: pre-line
+
+  &__link
+    margin: 10px 0 0 0
+    display: inline-block
+    color: $main
+    font-size: 18px
+    text-decoration: none
+    transition: .4s
+    cursor: pointer
+    &:hover, &:focus, &:active
+      color: darken($main, 20%)
+
+  &__gallery
+    margin: 32px 0 0 0
+
+    .swiper
+      &-slide
+        max-width: 304px
+
+      &-button-next
+        width: 60px
+        height: 60px
+        right: 28px
+        top: calc(50% - 12px)
+        border-radius: 100%
+        border: 2px solid #FFF
+        transform: rotate(180deg)
+        transition: .2s
+        &:after
+          content: '\261d'
+          color: #FFF
+          font-size: 20px
+          font-family: 'synergy-family-icons'
+          left: 50%
+          margin-left: -22px
+          position: relative
+          transition: .2s
+        &:hover, &:focus
+          background: $main
+          border: 2px solid $main
+          &:after
+            color: #303931
+        &:active
+          opacity: .3
+          top: calc(50% - 10px)
+          transition: .1s
+
+      &-button-prev
+        width: 60px
+        height: 60px
+        left: 28px
+        top: calc(50% - 12px)
+        border-radius: 100%
+        border: 2px solid #FFF
+        transition: .2s
+        &:after
+          content: '\261d'
+          color: #FFF
+          font-size: 20px
+          font-family: 'synergy-family-icons'
+          left: 50%
+          margin-left: -22px
+          position: relative
+          transition: .2s
+        &:hover, &:focus
+          background: $main
+          border: 2px solid $main
+          &:after
+            color: #303931
+        &:active
+          opacity: .3
+          top: calc(50% - 10px)
+          transition: .1s
+
+      &-pagination
+        width: 100% !important
+        height: 8px !important
+        left: 0 !important
+        bottom: 0 !important
+        top: unset !important
+        background: #FFF !important
+        &-progressbar-fill
+          background: $main !important
+
+    &__img
+      max-width: 304px
+      max-height: 200px

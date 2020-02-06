@@ -1,0 +1,38 @@
+.filters
+  margin-top: 20px
+  display: flex
+  justify-content: space-between
+
+  &-rate
+    display: flex
+    align-items: center
+    i
+      max-width: 24px
+      color: $main
+      font-size: 21px
+    &__col
+      margin: 0 32px 0 0
+      letter-spacing: 4px
+      &:last-of-type
+        margin: 0
+
+  &__select
+    margin: 0
+    padding: 0 15px
+    font-size: 18px
+    box-sizing: border-box
+    &-city
+      width: 160px
+      margin: 0 60px 0 auto
+      .jq-selectbox
+        min-width: 160px
+    &-sort
+      width: 222px
+      .jq-selectbox
+        min-width: 222px
+    &--persons
+      padding: 0
+      margin: 56px 0 0 auto
+
+  &-city
+    margin: 0 0 0 auto

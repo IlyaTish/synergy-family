@@ -1,0 +1,41 @@
+.locations
+  &__buttons
+    display: flex
+    .active
+      color: $brown
+      &:after
+        opacity: 1
+
+  &__btn
+    width: 50%
+    height: 116px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #9093A4
+    font-size: 36px
+    text-align: center
+    text-decoration: none
+    @include font-style
+    border-bottom: 2px solid #9093A4
+    transition: .2s
+    cursor: pointer
+    outline: none
+    &:after
+      width: 100%
+      height: 8px
+      content: ''
+      display: block
+      bottom: -5px
+      left: 0
+      position: absolute
+      opacity: 0
+      background: $main
+      transition: .2s
+    &:hover, &:focus
+      color: $brown
+
+
+@import 'filters/filters.sass'
+@import 'location-item/location-item.sass'

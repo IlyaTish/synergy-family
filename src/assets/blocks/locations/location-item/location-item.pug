@@ -1,0 +1,41 @@
+mixin location-item(title, path, tag)
+  a.location-item(href='location.html')
+    img.location-item__img.lazy(data-src=''+ path +'')
+    .location-item__desc
+      h3.location-item__title= title
+      .location-item__desc-bottom
+        .location-item__col
+          span.location-item__location Москва
+          .location-item__row
+            .location-item__col
+              span.location-item__amount 4.5
+              i.star-fill-icon.icon
+              i.star-fill-icon.icon
+              i.star-fill-icon.icon
+              i.star-fill-icon.icon
+              i.star-fill-icon.icon
+            .location-item__col.location-item__col--comments
+              span.location-item__amount 43
+              i.comments-icon.icon
+          .location-item__row
+            .location-item__col.location-item__col--likes
+              span.location-item__amount 32
+              i.like-icon.icon
+            .location-item__col.location-item__col--dislikes
+              span.location-item__amount 5
+              i.dislike-icon.icon
+        .location-item__col
+          .tag(tabindex='0')
+            span= tag
+
+
+.location-items.container.container--small
+  +location-item('Варшавские бани', 'assets/images/varshavskie-bani.jpg', 'Бани')
+  +location-item('Лотте плаза', 'assets/images/lotte-plaza.jpg', 'Концертные залы')
+  +location-item('Турандот', 'assets/images/turandot.jpg', 'Бани')
+  +location-item('Холидей Инн', 'assets/images/holidej-inn.jpg', 'Бани')
+  +location-item('Горджесс', 'assets/images/gordzhess.jpg', 'Бани')
+  +location-item('Варшавские бани', 'assets/images/varshavskie-bani.jpg', 'Бани')
+  +location-item('Турандот', 'assets/images/turandot.jpg', 'Бани')
+  +location-item('Лотте плаза', 'assets/images/lotte-plaza.jpg', 'Бани')
+  +location-item('Холидей Инн', 'assets/images/holidej-inn.jpg', 'Бани')

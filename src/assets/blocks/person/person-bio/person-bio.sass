@@ -1,0 +1,63 @@
+.person-bio
+  display: flex
+  margin-top: 72px
+
+  &__photo
+    max-width: 304px
+    min-width: 304px
+    height: 304px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    overflow: hidden
+
+  &__img
+    max-width: 608px
+
+  &__row
+    display: flex
+    justify-content: space-between
+
+  &__comments
+    display: flex
+    align-items: center
+    .icon
+      top: 2px
+      right: 27px
+      position: relative
+      font-size: 22px
+    &__amount
+      display: inline-block
+      color: $brown
+      font-size: 28px
+      font-family: 'Roboto-Bold'
+
+  &__title
+    display: inline-block
+    margin: 0
+    color: $brown
+    font-size: 36px
+    font-family: 'Roboto-Medium'
+
+  &__desc
+    width: 100%
+    margin: 0 0 0 30px
+
+  &__data
+    &__row
+      display: flex
+      margin: 26px 0 0 0
+    &__title
+      min-width: 192px
+      display: inline-block
+      color: $brown
+      font-size: 20px
+      font-family: 'Roboto-Medium'
+    &__text
+      min-width: 414px
+      margin: 0 0 0 32px
+      display: inline-block
+      color: #9093A4
+      font-size: 20px
+      font-family: 'Roboto-Regular'

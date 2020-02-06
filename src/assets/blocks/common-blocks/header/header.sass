@@ -1,0 +1,37 @@
+.header
+  height: 64px
+  background: #FFF
+
+  &__cont
+    height: 100%
+    display: flex
+    align-items: center
+
+  &__logo
+    img
+      transition: .4s
+    &:hover, &:focus, &:active
+      img
+        opacity: .6
+
+  &__nav
+    width: 100%
+    margin: 0 0 0 136px
+    &-list
+      padding: 0
+      margin: 0
+      display: flex
+      &__item
+        list-style: none
+        margin: 0 0 0 96px
+        &:first-of-type
+          margin: 0
+      &__link
+        color: #9093A4
+        font-size: 20px
+        @include font-style
+        text-decoration: none
+        transition: .2s
+        cursor: pointer
+        &:hover, &:focus
+          color: darken(#9093A4, 20%)

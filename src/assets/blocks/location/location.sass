@@ -1,0 +1,72 @@
+.location
+  margin-top: 46px
+
+  &__info
+    display: flex
+    &-item
+      display: flex
+      margin: 0 34px 0 0
+      &:last-of-type
+        margin: 0
+      &__amount
+        margin: 0 10px 0 0
+        display: inline-block
+        color: #35251f
+        font-size: 28px
+        font-weight: 600
+        font-family: 'Roboto-Bold'
+      i
+        font-size: 18px
+        margin: 8px 0 0 0
+
+    .jq-selectbox
+      min-width: 216px
+      .icons
+        min-width: 100px
+        display: flex
+        margin: 0 0 0 auto
+      .icon
+        margin: 0
+        color: $main
+        font-size: 20px
+      &__trigger
+
+      &__select
+        height: 30px
+        padding: 0
+        &:after
+          content: '\2b9f'
+          color: #9093A4
+          font-size: 20px
+        .icon
+          font-size: 26px
+          &:first-of-type
+            margin: 0 0 0 18px
+      &__select-text
+        width: 100% !important
+        color: #35251f
+        font-size: 28px
+        font-weight: 600
+        font-family: 'Roboto-Bold'
+      &__dropdown
+        ul
+          padding: 16px 0
+          li
+            height: 40px
+            padding: 0 42px
+            font-size: 18px
+            justify-content: space-between
+
+  &__rate
+    display: flex
+    margin: 0 34px 0 0
+    .sort-down-line-icon
+      margin: 12px 0 0 16px
+      color: #9093A4
+      font-size: 12px
+    &-cont
+      i
+        font-size: 24px
+        margin: 6px 4px 0 0
+        top: 5px
+        position: relative

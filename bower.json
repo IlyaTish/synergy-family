@@ -1,0 +1,17 @@
+{
+  "name": "view.morebricks.ru",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Duisakaev Stambul"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/IlyaTish/view.morebricks.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

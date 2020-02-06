@@ -1,0 +1,22 @@
+.container.locations
+  .locations__buttons
+    a.locations__btn.locations-btn(href='locations.html') Локации
+    a.locations__btn.persons-btn.active(href='persons.html') Персоны
+
+
+  //- Include Name-filter block ('.name-filter')
+  include name-filter/name-filter.pug
+
+
+  .container.container--small
+    .filters__select.filters__select--persons.filters__select-sort
+      select(name='Город' placeholder='Город')
+        option.disabled(disabled selected) Сортировка
+        option(name='Алфавит А-Я' value='Алфавит А-Я') Алфавит А-Я
+        option(name='Алфавит Я-А' value='Алфавит Я-А') Алфавит Я-А
+        option.arrow-option-more(name='Кол-во отзывов больше' value='Кол-во отзывов больше') Кол-во отзывов
+        option.arrow-option-less(name='Кол-во отзывов меньше' value='Кол-во отзывов меньше') Кол-во отзывов
+
+
+  //- Include Person-item block ('.person-item')
+  include person-item/person-item.pug
